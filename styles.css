@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'MuseumSans';
+    src: url('fonts/museum-sans.woff2') format('woff2');
+    font-display: swap;
+}
+
+body {
+    background-color: #f4eee0;
+    color: #332d29;
+    font-family: 'MuseumSans', Georgia, serif;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+
+body.night {
+    background-color: #121212;
+    color: #efe9de;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+}
+
+.sidebar {
+    padding: 2rem;
+    border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+body.night .sidebar {
+    border-right: 1px solid rgba(255,255,255,0.15);
+}
+
+.sidebar h1 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1, h2, h3 {
+    font-family: 'MuseumSans', Georgia, serif;
+    margin: 0 0 0.5rem 0;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #332d29;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+body.night nav a {
+    color: #efe9de;
+}
+
+nav a:hover,
+nav a.active {
+    color: #a67c52;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.card {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+body.night .card img {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+.card p {
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    body.night .sidebar {
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .gallery {
+        justify-content: stretch;
+    }
+
+    .card {
+        flex: 1 1 calc(100% - 40px);
+        max-width: 540px;
+    }
+}

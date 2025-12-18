@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Science & Physiology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="grid-container">
+        <nav class="sidebar">
+            <h1>Exercise Science & Physiology</h1>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="misconceptions.html">Misconceptions</a></li>
+                <li><a href="physiology.html">Physiology</a></li>
+                <li><a href="sources.html">Sources</a></li>
+            </ul>
+        </nav>
+        <main id="main-content">
+            <section class="gallery">
+                <a href="physiology.html" class="card">
+                    <img src="images/moment1.jpeg" 
+                         srcset="images/moment.png 2x" 
+                         alt="Muscular anatomy of a runner" 
+                         width="400" height="300">
+                    <p>Physiology & Anatomy</p>
+                </a>
+                <a href="misconceptions.html" class="card">
+                    <img src="images/lab1.jpeg" 
+                         srcset="images/lab.jpg 2x"
+                         alt="Athlete performing a VO2 max treadmill test" 
+                         width="400" height="300">
+                    <p>Importance & Misconceptions</p>
+                </a>
+                <a href="design.html" class="card">
+                    <img src="images/skeleton1.jpeg" 
+                         srcset="images/skeleton.jpg 2x" 
+                         alt="Biomechanical lever arm diagram" 
+                         width="400" height="300">
+                    <p>Sources</p>
+                </a>
+            </section>
+
+            <section id="interactive-zone">
+            
+                <p id="dynamic-text">Click the button for an inspiring quote.</p>
+                <button id="quoteBtn">Quote</button>
+                <button id="nightBtn" aria-pressed="false">Night Mode</button>
+                
+               
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
